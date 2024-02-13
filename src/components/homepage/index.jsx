@@ -163,8 +163,12 @@ const Homepage = () => {
                                 <td className="border px-4 py-2">{user.email}</td>
                                 <td className="border px-4 py-2">{user.address}</td>
                                 <td className="border px-4 py-2">
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Edit</button>
-                                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                        onClick={() => onUserEdit(user)}
+                                    >Edit</button>
+                                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                        onClick={() => onUserDelete(user._id)}
+                                    >Delete</button>
                                 </td>
                             </tr>
                         ))}
